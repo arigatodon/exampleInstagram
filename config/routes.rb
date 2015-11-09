@@ -12,7 +12,7 @@ get 'comments/index'
   # You can have the root of your site routed with "root"
  devise_scope :user do
     authenticated :user do
-      root 'home#dashboard', as: :authenticated_root
+      root 'posts#index', as: :authenticated_root
     end
 
     unauthenticated do
