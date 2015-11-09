@@ -15,8 +15,12 @@
       <tr>
         <td><%= image_tag(post.imagen ,size:'100x100') %></td>
         <td><%= link_to 'Show', post %></td>
+        <% if can? :edit, @post %>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
+         <% end %>
+         <% if can? :destroy, @post %>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
