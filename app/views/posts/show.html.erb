@@ -2,7 +2,7 @@
 
 <p>
   <strong>Imagen:</strong>
-  <%= @post.imagen %>
+  <%= image_tag(@post.imagen) %>
 </p>
 
 <%= form_for [@post, Comment.new] do |f| %>
