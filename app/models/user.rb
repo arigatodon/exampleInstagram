@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
 
   def default_role
     self.role ||= 1
+    self.active ||= true
   end
 
 
